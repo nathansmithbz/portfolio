@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="gameOflife.js"> </script>
+    <!-- <script src="simpleGameOfLife.js"> </script> -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Nathan Smith Portfolio</title>
+    <title>Game of Life</title>
 </head>
 <body>
-    
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
@@ -31,52 +34,36 @@
         </div>
     </nav>
 
-    <!-- Projects -->
+    <!-- Game of Life -->
     <section class="p-5">
         <div class="container">
             <div class="row text-center g-4">
-
-                <div class="col-md">
+                <div class="col-xl">
                     <div class="card bg-dark text-light shadow">
                         <div class="card-body text-center">
-                            <img src="img/boids.png" class="card-img-top mb-3" alt="A cluster of boids">
-                             <div class="h3 card-title mb-3">Boids</div>
-                            <p class="card-text">An example of Boids, with some additional simple preditor chase mechanics built using the p5.js JavaScript Library</p>
-                            <a href="#" class="btn btn-primary">Check it out</a>
+                            <div id="canvasDiv"></div>
+                            <div class="h3 card-title mb-3">Game of Life</div>                                
                         </div>
                     </div>
-                </div>    
-
-                <div class="col-md">
+                </div> 
                     <div class="col-md">
-                        <div class="card bg-dark text-light shadow">
-                            <div class="card-body text-center">
-                                <img src="img/gameOfLife.png" class="card-img-top mb-3" alt="A cluster of boids">
-                                 <div class="h3 card-title mb-3">Game of Life</div>
-                                <p class="card-text">An implementation of the Game of Life using the p5.js JavaScript Library</p>
-                                <a href="gameOfLife.html" class="btn btn-primary">Check it out</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-
-                <div class="col-md">
-                    <div class="col-md">
-                        <div class="card bg-dark text-light shadow">
-                            <div class="card-body text-center">
-                                <img src="img/temp.png" class="card-img-top mb-3" alt="A cluster of boids">
-                                 <div class="h3 card-title mb-3">Coming Soon...</div>
-                                <p class="card-text">More projects coming soon...</p>
-                                <!-- <a href="#" class="btn btn-primary">Check it out</a> -->
-                            </div>
-                        </div>
-                    </div> 
+                       <div class="h2 card-title mb-3">Game of Life</div>
+                       <p>An example of the Game of Life written in the JavaScript library p5.js.</p>
+                       <p>The Game of Life is set in an infinite two-dimensional grid inhabited by “cells”. Every cell interacts with up to eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. From an initial seed grid the game &quot;evolves&quot; one iteration at a time. An iteration applies rules to the grid to determine its next state.</p> 
+                       <div class="h4 card-title mb-3">Rules</div>
+                       <ul class="list-group">
+                        <div id="simpleCanvasDiv"></div>
+                            <li class="list-group-item">When a live cell has fewer than two neighbours -> <small class="text-muted">The cell dies</small></li>
+                            <li class="list-group-item">When a live cell has more than three neighbours -> <small class="text-muted">The cell dies</small></li>
+                            <li class="list-group-item">When a live cell has two or three neighbours -> <small class="text-muted">The cell lives</small></li>
+                            <li class="list-group-item">When an empty position has exactly three neighbouring cells -> <small class="text-muted">A new live cell is created at this positon</small></li>
+                        </ul>
+                       <p class="mt-5"><a href="https://github.com/nathansmithbz/game-of-Life">Take a look at the Github repo here</a><p>
+                    </div>
                 </div>   
-
             </div>
         </div>
     </section>
-
 
     <footer class="text-center bg-dark fixed-bottom">
         <div class="container pt-4">
@@ -85,5 +72,6 @@
             </section>
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,13 +1,15 @@
 
 function setup() {
+  //create canvas based on size of browser
   let canvas;
   if (windowWidth <= 440) {
     canvas = createCanvas(200, 200);
   }else if(windowWidth < 770){
-  canvas = createCanvas(300, 300);
+    canvas = createCanvas(300, 300);
   }else{
-  canvas = createCanvas(500, 500);
+    canvas = createCanvas(500, 500);
 }
+  //attach canvas to div in HTML doc 
   canvas.parent('canvasDiv')
   cellSize = 5;
   frameRate(10);
@@ -23,6 +25,7 @@ function setup() {
   }
   //Add button to reset simulation (often reaches a static state)
   let button = createButton("Reset");
+  //Add to div in HTML doc and give CSS classes 
   button.parent("canvasButton");
   button.addClass("btn btn-primary");
   button.mousePressed(reset);

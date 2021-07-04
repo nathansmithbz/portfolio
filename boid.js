@@ -10,8 +10,15 @@ let numBoids = 20;
 let numPreds = 1;
 
 function setup(){
-  myCanvas = createCanvas(500, 500);
-  myCanvas.parent("boidCanvas");
+  let canvas; 
+  if (windowWidth <= 440) {
+    canvas = createCanvas(200, 200);
+  }else if(windowWidth < 770){
+  canvas = createCanvas(300, 300);
+  }else{
+  canvas = createCanvas(500, 500);
+}
+  canvas.parent("boidCanvas");
   for(let i = 0; i < numBoids; i++){
     append(boids, new Boid(random(width),random(height)));
   }

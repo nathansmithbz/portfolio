@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Boids</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -52,7 +52,7 @@
                             <li class="list-group-item">separation: steer to avoid crowding local flockmates.</li>
                             <li class="list-group-item">alignment: steer towards the average heading of local flockmates</li>
                             <li class="list-group-item">cohesion: steer to move towards the average position (center of mass) of local flockmates</li>
-                        </ul>    
+                        </ul>
                        <div class="h4 card-title mb-3">Controls</div>
                        <ul class="list-group">
                             <li class="list-group-item">Use the + and - keys to add or remove predators.</li>
@@ -67,7 +67,8 @@
         </div>
     </section>
 
-    <footer class="text-center bg-dark fixed-bottom">
+    <!-- Footer -->
+    <footer class="text-center bg-dark mt-auto">
         <div class="container pt-4">
             <section class="mb-4">
                 <a href="https://github.com/nathansmithbz"><i class="bi-github" style="font-size: 2rem; color: white;"></i></a>
